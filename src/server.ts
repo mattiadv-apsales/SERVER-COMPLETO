@@ -2,6 +2,7 @@ import http from 'http';
 import { router } from './router.js';
 import './routes/health.js';
 import './middlewares/logger.js';
+import './middlewares/json.js';
 import { staticMiddleware } from './middlewares/static.js';
 
 staticMiddleware('public');

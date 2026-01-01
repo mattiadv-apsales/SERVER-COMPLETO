@@ -32,6 +32,10 @@ export function get(path: string, handler: RouteHandler) {
     }
 }
 
+export function post(path: string, handler: handler) {
+    routes[`POST ${path}`] = handler;
+}
+
 export function router(req: IncomingMessage, res: ServerResponse) {
     let url: string = req.url || "/";
     let clearUrl = url.split("?")[0]?.replace(/\/+/g, "/") || "/";
