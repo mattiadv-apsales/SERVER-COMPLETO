@@ -6,7 +6,7 @@ button.addEventListener('click', function() {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ message: "Ciao dal client!" })
+        body: JSON.stringify({ message: "Ciao dal client!", user: "Mattia" })
     })
     .then(response => response.json())
     .then(data => {
