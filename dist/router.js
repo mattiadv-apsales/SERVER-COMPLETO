@@ -25,6 +25,9 @@ export function get(path, handler) {
         routes[`GET ${path}`] = handler;
     }
 }
+export function post(path, handler) {
+    routes[`POST ${path}`] = handler;
+}
 export function router(req, res) {
     let url = req.url || "/";
     let clearUrl = url.split("?")[0]?.replace(/\/+/g, "/") || "/";
