@@ -1,0 +1,1 @@
+{"version":3,"file":"mime.js","sourceRoot":"","sources":["../../src/middlewares/mime.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,SAAS,GAA2B;IAC7C,OAAO,EAAE,0BAA0B;IACnC,MAAM,EAAE,yBAAyB;IACjC,KAAK,EAAE,uCAAuC;IAC9C,OAAO,EAAE,iCAAiC;IAC1C,MAAM,EAAE,WAAW;IACnB,MAAM,EAAE,YAAY;IACpB,OAAO,EAAE,YAAY;IACrB,MAAM,EAAE,eAAe;IACvB,MAAM,EAAE,cAAc;CACzB,CAAA"}
