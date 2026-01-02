@@ -14,7 +14,10 @@ export function staticMiddleware(root: string) {
         }
 
         let filePath = req.url.split("?")[0];
-        if (filePath === "/") filePath = "/index.html";
+        if (filePath === "/" || filePath === "/index") {
+            next();
+            return;
+        }
 
         const fullPath = path.join(absoluteRoot, filePath!);
         

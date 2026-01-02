@@ -1,0 +1,1 @@
+{"version":3,"file":"sessions.d.ts","sourceRoot":"","sources":["../../src/middlewares/sessions.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,eAAe,EAAkB,MAAM,WAAW,CAAC;AAE5D,OAAO,KAAK,EAAE,UAAU,EAAE,MAAM,kBAAkB,CAAC;AAMnD,MAAM,WAAW,cAAe,SAAQ,eAAe;IACnD,OAAO,CAAC,EAAE,GAAG,CAAC;CACjB;AAgBD,wBAAgB,cAAc,CAAC,GAAG,EAAE,MAAM,QAEzC;AAED,eAAO,MAAM,iBAAiB,EAAE,UAY/B,CAAA"}

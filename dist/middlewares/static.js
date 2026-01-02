@@ -10,8 +10,10 @@ export function staticMiddleware(root) {
             return;
         }
         let filePath = req.url.split("?")[0];
-        if (filePath === "/")
-            filePath = "/index.html";
+        if (filePath === "/" || filePath === "/index") {
+            next();
+            return;
+        }
         const fullPath = path.join(absoluteRoot, filePath);
         if (!fullPath.startsWith(absoluteRoot)) {
             res.statusCode = 403;

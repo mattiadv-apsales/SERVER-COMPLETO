@@ -13,18 +13,20 @@ function pathJoin(...segments: string[]) {
 
 export function get(path: string, handler: RouteHandler) {
     if (typeof handler === "string") {
-        routes[`GET ${path}`] = (_, res) => {
-            const filePath = pathJoin("public", handler);
+        routes[`GET ${path}`] = (req, res) => {
+            runMiddleware(req, res, () => {
+                const filePath = pathJoin("public", handler);
 
-            fs.readFile(filePath, "utf-8", (err, data) => {
-                if (err) {
-                    res.statusCode = 500;
-                    res.end("Internal Server Error");
-                    return;
-                }
+                fs.readFile(filePath, "utf-8", (err, data) => {
+                    if (err) {
+                        res.statusCode = 500;
+                        res.end("Internal Server Error");
+                        return;
+                    }
 
-                res.setHeader("Content-Type", "text/html; charset=utf-8");
-                res.end(data);
+                    res.setHeader("Content-Type", "text/html; charset=utf-8");
+                    res.end(data);
+                })
             })
         }
     } else {
